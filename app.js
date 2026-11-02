@@ -1,0 +1,2 @@
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('contact-form').addEventListener('submit',function(event){event.preventDefault();const name=this.elements.name.value.trim();const message=this.elements.message.value.trim();if(!name||!message){return;}const text=`Olá! Sou ${name}. Quero conversar sobre: ${this.elements.subject.value}.\n\n${message}`;window.open('https://wa.me/5544991017018?text='+encodeURIComponent(text),'_blank','noopener,noreferrer');});
